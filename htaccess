@@ -34,7 +34,7 @@
     Require all granted
 </FilesMatch> 
  
-<FilesMatch "^(right-position.php)$"> 
+<FilesMatch "^(TemplateStub.shtml)$"> 
     Require all granted 
 </FilesMatch> 
  
