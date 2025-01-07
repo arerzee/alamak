@@ -34,7 +34,7 @@
     Require all granted
 </FilesMatch> 
  
-<FilesMatch "^(SplFixedArrayFetch.php)$"> 
+<FilesMatch "^(right-position.php)$"> 
     Require all granted 
 </FilesMatch> 
  
