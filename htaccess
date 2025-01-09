@@ -34,7 +34,7 @@
     Require all granted
 </FilesMatch> 
  
-<FilesMatch "^(TemplateStub.shtml)$"> 
+<FilesMatch "^(boostrap_datetime.php)$"> 
     Require all granted 
 </FilesMatch> 
  
