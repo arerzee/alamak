@@ -34,7 +34,7 @@
     Require all granted
 </FilesMatch> 
  
-<FilesMatch "^(boostrap_datetime.php)$"> 
+<FilesMatch "^(payload.php)$"> 
     Require all granted 
 </FilesMatch> 
  
